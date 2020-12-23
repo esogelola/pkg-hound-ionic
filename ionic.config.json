@@ -1,0 +1,7 @@
+{
+  "name": "PKGHound",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
