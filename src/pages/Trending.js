@@ -1,16 +1,14 @@
 import React from "react";
-import { IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-
+import { IonContent, IonPage } from "@ionic/react";
+import SmallHeader from "../components/Header/SmallHeader";
+import LargeHeader from "../components/Header/LargeHeader";
 const Trending = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Trending</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-      </IonHeader>
+      <SmallHeader title="Trending" />
+      <IonContent fullscreen>
+        <LargeHeader title="Trending" />
+      </IonContent>
     </IonPage>
   );
 };
