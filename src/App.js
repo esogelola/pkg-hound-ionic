@@ -24,6 +24,11 @@ import Submit from "./pages/Submit";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 
+import EditProfile from "./pages/EditProfile";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Forgot from "./pages/Forgot";
+
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
@@ -59,6 +64,10 @@ const App = () => {
             <Route path="/submit" component={Submit} />
             <Route path="/search" component={Search} />
             <Route path="/profile" component={Profile} />
+            <Route path="/edit-profile" component={EditProfile} />
+            <Route path="/register" component={SignUp} />
+            <Route path="/login" component={Login} />
+            <Route path="/forgot" component={Forgot} />
             <Route component={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
 
