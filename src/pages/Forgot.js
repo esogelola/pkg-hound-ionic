@@ -8,6 +8,7 @@ import {
   IonItem,
   IonInput,
   IonContent,
+  IonLoading,
 } from "@ionic/react";
 import NavHeader from "../components/Header/NavHeader";
 import { toast } from "../utils/toast";
@@ -47,6 +48,7 @@ const Forgot = (props) => {
   return (
     <IonPage>
       <NavHeader title="Reset Password" />
+      <IonLoading message={"Please wait..."} isOpen={busy} />
       <IonContent>
         <IonItem lines="full">
           <IonLabel position="floating">Email</IonLabel>
