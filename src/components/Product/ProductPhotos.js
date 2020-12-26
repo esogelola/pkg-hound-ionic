@@ -8,7 +8,7 @@ function ProductPhotos({ photos }) {
     <IonCard>
       <IonList lines="none">
         <IonItem>
-          <div style={{ margin: "0 auto" }}>
+          <div style={{ margin: "0 auto", width: "500px", height: "500px" }}>
             <IonImg src={photos[index]} />
           </div>
         </IonItem>
