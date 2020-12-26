@@ -14,6 +14,7 @@ import {
 } from "@ionic/react";
 import {
   chevronUpCircleOutline,
+  chatbubbleEllipsesOutline,
   personCircleOutline,
   timeOutline,
   caretUp,
@@ -63,7 +64,7 @@ const ProductItem = ({ product, history, url, browser }) => {
                   style={{
                     verticalAlign: "middle",
                   }}
-                />
+                />{" "}
                 <IonText
                   style={{
                     verticalAlign: "middle",
@@ -71,13 +72,13 @@ const ProductItem = ({ product, history, url, browser }) => {
                 >
                   {product.voteCount} points
                 </IonText>
-
+                {" | "}
                 <IonIcon
                   icon={personCircleOutline}
                   style={{
                     verticalAlign: "middle",
                   }}
-                />
+                />{" "}
                 <IonText
                   style={{
                     verticalAlign: "middle",
@@ -85,13 +86,13 @@ const ProductItem = ({ product, history, url, browser }) => {
                 >
                   {product.postedBy.name}
                 </IonText>
-
+                {" | "}
                 <IonIcon
                   icon={timeOutline}
                   style={{
                     verticalAlign: "middle",
                   }}
-                />
+                />{" "}
                 <IonText
                   style={{
                     verticalAlign: "middle",
@@ -99,6 +100,24 @@ const ProductItem = ({ product, history, url, browser }) => {
                 >
                   {formatDistanceToNow(product.created)}
                 </IonText>
+                {product.comments.length > 0 && (
+                  <>
+                    {" | "}
+                    <IonIcon
+                      icon={chatbubbleEllipsesOutline}
+                      style={{
+                        verticalAlign: "middle",
+                      }}
+                    />{" "}
+                    <IonText
+                      style={{
+                        verticalAlign: "middle",
+                      }}
+                    >
+                      {product.comments.length} comments
+                    </IonText>
+                  </>
+                )}{" "}
               </p>
             </IonLabel>
             <IonButton slot="end" onClick={addUpvote} size="large">
